@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send message to ms teams
-        uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
+        uses: muinmomin/webhook-action@v1.0.0
         with:
-          webhook: ${{ SECRETS.TEAMS_URL }}
-          message: '
+          url: ${{ SECRETS.TEAMS_URL }}
+          data: '
             {
              "type":"message",
              "attachments":[
