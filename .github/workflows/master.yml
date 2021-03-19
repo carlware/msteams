@@ -14,8 +14,8 @@ jobs:
         uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
         with:
           webhook: ${{ SECRETS.TEAMS_URL }}
-          message: |
-            '{
+          message: '
+            {
              "type":"message",
              "attachments":[
                 {
