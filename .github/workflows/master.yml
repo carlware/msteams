@@ -1,0 +1,17 @@
+name: master_ci_cd
+
+on:
+  push:
+    branches: "main"
+
+
+jobs:
+  teams_message:
+    name: "Send a message on teams"
+    runs_on: ["linux"]
+    steps:
+      - name: Send message to ms teams
+        uses: dhollerbach/github-action-send-message-to-ms-teams@1.0.10
+        with:
+          webhook: ${{ SECRETS.TEAMS_URL }}
+          message: 'W00t it werked!'
